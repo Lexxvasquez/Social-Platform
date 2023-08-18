@@ -18,7 +18,6 @@ npm install
 ## Screenshot
 
 
-
 ## Links
 
 ![Click me to see the demon video!]()
