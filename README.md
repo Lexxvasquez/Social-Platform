@@ -9,6 +9,8 @@ This application is an API for a social network web application where users can 
 * Express.js
 * MongoDB
 * Mongoose
+* Nodemon
+* Moment
 
 ## Installation
 To run this project, install it locally using npm:
