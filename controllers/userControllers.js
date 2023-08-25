@@ -41,4 +41,17 @@ module.exports = {
             .catch((err) => res.json(err));
     },  
 
+    updateUser(req,res) {
+        User.findOneAndUpdate({_id:req.params.id},req.body,{new:true})
+            .then(userData=>res.json(userData))  
+            .catch(err=> res.json(err)); //         req.user._id === req.params.id ?
+    },
+
+    removeUser({params},res) {
+        User.findOneAndDelete({_id:params.id})
+            .then(userData=>res.json(userData))
+            .catch(err=> res.json(err));
+    }
+
+
 }
