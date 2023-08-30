@@ -3,10 +3,6 @@ const { Thought } = require('../models');
 module.exports = {
     getAllThought(req, res) {
         Thought.find({})
-            .populate({
-                path: 'thoughts',
-                select: '-__v'
-            })
             .select('-__v')
             .then((dbThoughtData) => res.json(dbThoughtData))
             .catch((err) => {
@@ -17,10 +13,6 @@ module.exports = {
 
     getThoughtById({ params }, res) {
         Thought.findOne({ _id: params.id })
-            .populate({
-                path: 'thoughts',
-                select: '-__v'
-            })
             .select('-__v')
             .then((dbThoughtData) => {
                 if (!dbThoughtData) {

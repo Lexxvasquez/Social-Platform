@@ -51,7 +51,15 @@ module.exports = {
         User.findOneAndDelete({_id:params.id})
             .then(userData=>res.json(userData))
             .catch(err=> res.json(err));
-    }
+    },
 
+    addFriend({params},res) {
+        User.findOneAndUpdate({_id:params.userId},{$addToSet:{friends:params.friendId}},{new:true})
+            .then(userData => res.json(userData));
+    },
 
+    removeFriend({params},res) {
+        User.findOneAndUpdate({_id:params.userId},{$pull:{friends:params.friendId}},{new:true})
+            .then(userData => res.json(userData));
+    },
 }
