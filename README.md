@@ -30,6 +30,6 @@ npm test
 
 ## Links
 
-![Video Link](https://drive.google.com/file/d/1irzvSVWPWSK3F1DdIPjVAKapVeyAWbXQ/view)
+[Video Link](https://drive.google.com/file/d/1irzvSVWPWSK3F1DdIPjVAKapVeyAWbXQ/view)
 
-![Github Repo](https://github.com/Lexxvasquez/Social-Platform)
+[Github Repo](https://github.com/Lexxvasquez/Social-Platform)
